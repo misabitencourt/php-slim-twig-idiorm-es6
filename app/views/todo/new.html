@@ -1,0 +1,30 @@
+{% extends "template.html" %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-md-8">
+        <h1>
+            Novo item
+        </h1>
+
+        <form action="/todo" method="POST">
+            {% include 'todo/_form.html' %}
+
+            <div class="row">
+                <div class="col-xs-12 text-xs-right">
+                    <button class="btn btn-success">
+                        Salvar
+                    </button>
+                    <a href="/todos" title="Voltar">
+                        <button class="btn btn-default" type="button">
+                            Cancelar
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

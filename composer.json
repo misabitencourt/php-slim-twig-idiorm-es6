@@ -1,0 +1,16 @@
+{
+    "name": "misael/sabores",
+    "description": "Site sabores caseiros",
+    "authors": [
+        {
+            "name": "Misael Braga de Bitencourt",
+            "email": "misabitencourt@gmail.com"
+        }
+    ],
+    "require": {
+        "slim/slim": "^3.0",
+        "twig/twig": "~1.0",
+        "guzzle/guzzle": "^3.0",
+        "j4mie/idiorm": "~1.5.2"
+    }
+}

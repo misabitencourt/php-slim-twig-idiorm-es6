@@ -1,0 +1,32 @@
+{
+  "name": "php-boilerplate",
+  "version": "1.0.0",
+  "description": "Boilerplate - PHP",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack --config mywebpack.config.js --watch",
+    "transpile": "babel app/assets/js/main.js --out-file app/assets/js/main.js",
+    "minify": "uglifyjs ./app/assets/js/main.js --compress --output ./app/assets/js/main.js",
+    "build": "webpack --config mywebpack.config.js & npm run transpile & npm run minify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://192.168.2.9/Bonobo.Git.Server/ate-exame-online-med.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-cli": "^6.22.2",
+    "babel-preset-es2015": "^6.22.0",
+    "bootstrap": "^4.0.0-alpha.5",
+    "moment": "^2.17.1",
+    "uglify-js": "^2.7.5",
+    "uglifycss": "0.0.25",
+    "webpack": "2.1.0-beta.27",
+    "whatwg-fetch": "^2.0.2"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-es2015-template-literals": "^6.8.0"
+  }
+}

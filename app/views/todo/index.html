@@ -1,0 +1,40 @@
+{% extends "template.html" %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-md-8">
+        <h1>
+            Todo list
+            <a href="/todo/new" title="novo item" class="float-right">
+                <span class="ion-ios-plus-outline"></span>
+            </a>
+        </h1>
+        {% if not message is empty %}
+        <p class="text-success">{{ message }}</p>
+        {% endif %}
+    </div>
+</div>
+
+{% if todos is empty  %}
+    <p class="text-xs-center text-warning">
+        Nenhum item registrado
+    </p>
+{% else %}
+    <ul class='col-xs-12 col-sm-5 col-md-3'>
+        {% for todo in todos %}
+        <li>
+            {{ todo.description }}
+            <span class="float-right">
+                <a href="/todo/{{ todo.id }}/edit" title="Editar"
+                      class="ion-ios-compose-outline text-primary"></a>
+                <span data-link="/todo/{{ todo.id }}/delete" title="excluir"
+                      data-link-confirm="Deseja mesmo excluir este item?"
+                      class="ion-ios-close-outline text-danger"></span>
+            </span>
+        </li>
+        {% endfor %}
+    </ul>
+{% endif %}
+
+{% endblock %}
