@@ -17,7 +17,6 @@ $loader = new \Twig_Loader_Filesystem(realpath(dirname(__FILE__)).'/views');
 // Production behavior
 if (ENV === 'prod') {
 
-    R::freeze(true);
     $twig = new \Twig_Environment($loader, array(
         'cache' => '../cache/twig',
     ));
